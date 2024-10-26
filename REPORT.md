@@ -49,4 +49,20 @@
 
     ![image](https://github.com/user-attachments/assets/7e3f1cd4-4c44-4572-a462-7f3c42ab3d51)
 
+13. Проверим соединение между "A" и "C"
+
+   ![image](https://github.com/user-attachments/assets/c9ef9653-887a-47aa-a822-973a288c5935)
+
+14. Проверим соединение между "A" и "B"
+
+    ![image](https://github.com/user-attachments/assets/a5e3bd15-6240-41f2-b76c-98ba1dbe482c)
+
+15. Убедимся, что между серверами "B" и "C" отсутствует
+
+    ![image](https://github.com/user-attachments/assets/d57cc68b-9bba-47e1-ab81-030d6da3c9c2)
+
+    Как мы видим, все пакеты были переданы, но никакого ответа от другого сервера мы не получили.
+
+
+
 
