@@ -67,5 +67,18 @@
    ![image](https://github.com/user-attachments/assets/3c1afcb5-4e8d-4615-bd94-e176e394989f)
 
 
+Дополнение: Связь машин дург с другом без доступа в интернет
+1. В настройках машин "B" и "C" поменяем тип подключения на внутреннюю сеть и зададим ей соответствующие названия "AB" и "AC" 
 
+   ![image](https://github.com/user-attachments/assets/ba2b9c00-8629-4da2-8bc8-76f2d4df7264)
 
+   ![image](https://github.com/user-attachments/assets/3d30c1d7-b1d1-4564-8dec-486f0fbd0a01)
+
+2. Выключим машину "A", чтобы добавить 3-й адаптер. Первым будет адаптер с типом подключения NAT (чтобы у этого сервера был доступ в интернет), второй и третий - с типом подключения "внутренняя сеть"
+   ![image](https://github.com/user-attachments/assets/5a34c41f-10bb-4ced-aee5-cea8885d12f2)
+   ![image](https://github.com/user-attachments/assets/418635f8-f5e3-467b-b2be-af50015e353c)
+   ![image](https://github.com/user-attachments/assets/85c0929b-4ff8-4d1c-8928-7896bcbc5153)
+
+3. Запустим машину "A" и выведем информацию о всех подключениях, если у адаптеров 2 и 3 нет адресов, то назначим их с помощью команды sudo ifconfig <имя_адаптера> <нужное значение ip> (enp0s8 - имя второго адаптера, enp0s9 - третьего)
+
+   ![image](https://github.com/user-attachments/assets/df856398-c061-471e-b44f-e289ae6f4588)
