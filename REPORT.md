@@ -7,9 +7,11 @@
    ![image](https://github.com/user-attachments/assets/b6a2a353-f594-49c3-b759-d0577507053d)
    
 4. В настройках виртуальной машины "A" зайдем в раздел "Сеть". Для первого адаптера выберем тип - "Сеть NAT" - и созданную "AB", а для второго - "AC"
+   
    ![image](https://github.com/user-attachments/assets/0c313084-36ef-4ee4-af39-be55493a961a)
 
    Адаптер 1
+   
    ![image](https://github.com/user-attachments/assets/ac295916-2889-4aa9-a84b-46685c0e41b0)
 
    Адаптер 2
@@ -19,5 +21,32 @@
    
 6. В настройках виртуальной машины "C" в том же разделе для первого адаптера выберем сеть "AC"
    ![image](https://github.com/user-attachments/assets/5990f355-80f5-44a4-9ae1-fe404acca8d0)
+
+7. Запустим все виртуальные машины. Можно выбрать утилиту net-tools при установке ОС или установить ее через терминал командой sudo apt install net-tools
+
+8. Так как мы выбрали тип подключения "Сеть NAT", то у всех 3-х машин будет доступ в интернет. Проверим наличие соединение и качество сети, отправив пакеты на какой-либо сайт, с помощью команды ping
+   
+   ![image](https://github.com/user-attachments/assets/149a11af-800f-4ecc-bec8-9567047759e3)
+
+9. С помощью команды ifconfig мы можем увидеть информацию о назначенных сетевому адаптеру(интерфейсу) адресах
+
+   Для машины "B":
+   ![image](https://github.com/user-attachments/assets/2d54ebf0-2366-4aed-8386-e26b00590c8b)
+
+   Для машины "C":
+   ![image](https://github.com/user-attachments/assets/88d68d5b-5b6a-4591-ab41-fafcdb6c4a90)
+
+   Для машины "A":
+   ![image](https://github.com/user-attachments/assets/c9b7fce6-bd71-44a6-804e-428f7172d194)
+
+10. У сервера "A" не установлен адрес для второго адаптера. Это может произойти по разным причинам, включая ошибки VirtualBox. Путей решения этой проблемы также несколько: можно изменить файл "interfaces" или настроить сеть через утилиту nmap.
+
+11. Я выбрала самый простой способ - установить ip-адрес через консоль. Напишем для этого команду sudo ifconfig <имя_адаптера> <нужное значение ip>
+    
+    ![image](https://github.com/user-attachments/assets/96604a34-a925-4402-9f8c-dbe7ddb45a65)
+
+12. Снова выполним команду ifconfig и убедимся, что теперь второму адаптеру соответствует адрес 192.168.200.5
+
+    ![image](https://github.com/user-attachments/assets/7e3f1cd4-4c44-4572-a462-7f3c42ab3d51)
 
 
